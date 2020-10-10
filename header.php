@@ -20,6 +20,6 @@
             ];
         wp_nav_menu( $args ); 
         ?>
-    </nav>
+        </nav>
     </header>
 

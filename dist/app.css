@@ -1,4 +1,22 @@
 body {
+  font-family: sans-serif;
   background: #f2f9ed;
 }
+
+header nav {
+  background-color: #61665b;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul a {
+  color: white;
+  text-decoration: none;
+}
+
+/*
+npm run watch
+*/
 
