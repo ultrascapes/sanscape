@@ -9,6 +9,7 @@
         wp_nav_menu( $args ); 
         ?>
     </nav>
+    <div class="grd-con">
     <?php 
     $widgets = '';
     if ( is_active_sidebar( 'footer-one' ) ) {
@@ -24,6 +25,7 @@
         $widgets .= dynamic_sidebar( 'footer-four' );
     }
     ?>
+    </div>
 </footer>
 
 </body>

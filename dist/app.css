@@ -17,6 +17,41 @@ header nav ul a {
 }
 
 /*
+section {
+    ul {
+        background-color: thistle;
+        &.children {
+            background-color: tomato;
+        }
+    }
+}
+*/
+
+.grd-con {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grd-con section {
+  background-color: wheat;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul.children {
+  font-size: 0.5em;
+}
+
+/*
 npm run watch
 */
 
