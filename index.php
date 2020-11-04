@@ -12,7 +12,7 @@
                 <?php get_template_part( '/template-parts/content', 'none' ); ?>
 
             <?php endif; ?>
-
+                
             <hr>
             <p><strong>Template: index.php</strong></p>
             <hr>        

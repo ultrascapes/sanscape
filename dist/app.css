@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body {
   font-family: sans-serif;
   background: #f2f9ed;
@@ -5,10 +7,12 @@ body {
 
 header nav {
   background-color: #61665b;
+  padding: 5px 5%;
 }
 
 header nav ul {
   list-style: none;
+  padding: 0;
 }
 
 header nav ul a {
@@ -16,16 +20,22 @@ header nav ul a {
   text-decoration: none;
 }
 
-/*
-section {
-    ul {
-        background-color: thistle;
-        &.children {
-            background-color: tomato;
-        }
-    }
+header nav ul li {
+  border-top: rgba(255, 255, 255, 0.5) solid 1px;
+  padding: 5px 0;
 }
-*/
+
+header nav ul li ul {
+  max-height: 0;
+  overflow: hidden;
+}
+
+header nav ul li.menu-item-has-children::before {
+  content: "\25BC";
+  float: right;
+  opacity: 0.5;
+  color: white;
+}
 
 .grd-con {
   display: grid;
