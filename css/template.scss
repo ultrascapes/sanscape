@@ -1,6 +1,10 @@
 body {
     font-family: sans-serif;
-    background: #f2f9ed
+    background: #f2f9ed;
+}
+
+#primary {
+    background-color: rosybrown;
 }
 
 header {
@@ -52,7 +56,3 @@ footer {
         }
     }
 }
-
-/*
-npm run watch
-*/

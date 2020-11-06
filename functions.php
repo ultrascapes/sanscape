@@ -21,7 +21,7 @@ add_theme_support( 'starter-content' );
 function sanscape_enqueue_styles() {
     //Change time() to version number when in production
     wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', [], time(), 'all' ); 
-    wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/dist/app.css', [], time(), 'all' ); 
+    wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/css/template.css', [], time(), 'all' ); 
 }
 add_action( 'wp_enqueue_scripts', 'sanscape_enqueue_styles' );
 /*

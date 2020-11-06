@@ -1,8 +1,10 @@
-@charset "UTF-8";
-
 body {
   font-family: sans-serif;
   background: #f2f9ed;
+}
+
+#primary {
+  background-color: rosybrown;
 }
 
 header nav {
@@ -31,16 +33,18 @@ header nav ul li ul {
 }
 
 header nav ul li.menu-item-has-children::before {
-  content: "\25BC";
+  content: "\25bc";
   float: right;
   opacity: 0.5;
   color: white;
 }
 
 .grd-con {
+  display: -ms-grid;
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .grd-con section {
@@ -60,8 +64,4 @@ footer ul {
 footer ul.children {
   font-size: 0.5em;
 }
-
-/*
-npm run watch
-*/
-
+/*# sourceMappingURL=template.css.map */
