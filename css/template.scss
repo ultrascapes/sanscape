@@ -1,52 +1,95 @@
 body {
     font-family: sans-serif;
     background: #f2f9ed;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0;
 }
 
+header {
+    background-color: #e6efea;
+}
+
+
 #primary {
-    background-color: rosybrown;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 header {
     nav {
-        background-color: #61665b;
-        padding: 5px 5%;
         ul {
+            &.menu {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+                margin: 0;
+            }
             list-style: none;
             padding: 0;
             a {
-                color: white;
+                color: #262b2b;
                 text-decoration: none;
-
             }
             li {
-                border-top: rgba($color: white, $alpha: 0.5) solid 1px;
+                /*border-top: rgba($color: #262b2b, $alpha: 0.5) solid 1px;*/
                 padding: 5px 0;
-                ul {
+                margin: 0 10px;
+                /*ul {
                     max-height: 0;
                     overflow: hidden;
+                }*/
+                &:last-child {
+                    margin: 0 0 0 10px;
                 }
             }
+            /*
             li.menu-item-has-children::before {
                 content: "\25bc";
                 float: right;
                 opacity: 0.5;
                 color: white;
             }
+            */
         }
     }
 }
-.grd-con {
+
+.sans-cont {
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 94%;
+    max-width: 1200px;
+}
+
+.sans-grd-cont {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     section {
-        background-color: wheat;
+        background-color: #f9fbef;
         padding: 20px;
     }
 }
 
+.sans-flx {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sans-txt-rt {
+    text-align: right;
+}
+
+.sans-flx-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 footer {
+    background-color: #e6efea;
     text-align: center;
     ul {
         list-style: none;

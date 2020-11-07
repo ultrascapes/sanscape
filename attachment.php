@@ -2,14 +2,11 @@
     
     <div id="primary">
         <main id="main" role="main">
-
+            <h2>attachment.php</h2>
             <?php if ( have_posts()  ) : while ( have_posts() ) : the_post(); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <header>
                     <?php the_title( '<h1>', '</h1>' ); ?>
-
-                </header>
                 <div>
                     <pre><?php var_export( $post); ?></pre>
 

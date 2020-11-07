@@ -2,7 +2,7 @@
     
     <div id="primary">
         <main id="main" role="main">
-
+        <h2>author.php</h2>
             <div>
                 <h1><?php the_archive_title(); ?></h1>
                 <p>
