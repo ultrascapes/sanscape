@@ -1,21 +1,62 @@
 body {
   font-family: sans-serif;
-  background: #f2f9ed;
+  background: #c4c4c4;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.sans-pg-fold-r3 {
   height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto 1fr auto;
       grid-template-rows: auto 1fr auto;
-  margin: 0;
 }
 
-header {
-  background-color: #e6efea;
+.sans-pg-fold-r1 {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+}
+
+h2 {
+  font-weight: 300;
 }
 
 #primary {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.sans-row-bg-1 {
+  background-color: #fff;
+}
+
+.sans-row-bg-2 {
+  background-color: #ececec;
+}
+
+header .sans-top-bar {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+header .sans-top-brand {
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+header .sans-top-brand .custom-logo {
+  max-height: 80px;
+}
+
+header .sans-top-brand-home {
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+header .sans-top-brand-home .custom-logo {
+  max-height: 250px;
 }
 
 header nav ul {
@@ -78,8 +119,13 @@ header nav ul li:last-child {
 }
 
 .sans-grd-cont section {
-  background-color: #f9fbef;
   padding: 20px;
+}
+
+.sans-grd-ctr {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 .sans-flx {
@@ -91,8 +137,18 @@ header nav ul li:last-child {
           justify-content: space-between;
 }
 
+.sans-alg-it-ctr {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .sans-txt-rt {
   text-align: right;
+}
+
+.sans-txt-ctr {
+  text-align: center;
 }
 
 .sans-flx-col {
@@ -109,7 +165,7 @@ header nav ul li:last-child {
 }
 
 footer {
-  background-color: #e6efea;
+  background-color: rgba(255, 255, 255, 0.5);
   text-align: center;
 }
 

@@ -9,7 +9,7 @@
     <div class="sans-pg-fold-r3">
         <header id="masthead" role="banner">
             <?php get_template_part( '/template-parts/header', 'nav' ); ?>
-            <div class="sans-top-brand">
+            <div class="sans-top-brand-home">
                 <div class="sans-cont">
                     <a href="<?php echo esc_url( home_url( '/') ) ;?>" rel="home">
                         <?php
@@ -21,5 +21,15 @@
                 </div>
             </div>
         </header>
-        <div class="sans-pg-content">
+        <div class="sans-cont sans-txt-ctr sans-grd-ctr">
+            <div>
+                <h1><?php bloginfo( 'name' ); ?></h1>
+                <h2><?php bloginfo( 'description' ); ?></h2>
+            </div>
+        </div>
+        <div class="sans-cont sans-txt-ctr">
+            Learn More
+        </div>
+    </div>
+
 

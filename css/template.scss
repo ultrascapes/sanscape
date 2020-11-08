@@ -1,23 +1,63 @@
 body {
     font-family: sans-serif;
-    background: #f2f9ed;
+    background: #c4c4c4;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.sans-pg-fold-r3 {
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    margin: 0;
 }
 
-header {
-    background-color: #e6efea;
+.sans-pg-fold-r1 {
+    height: 100vh;
+    display: grid;
 }
+
+
+
+h2 {
+    font-weight: 300;
+}
+
 
 
 #primary {
+    
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
+.sans-row-bg-1 {
+    background-color: #fff;
+}
+.sans-row-bg-2 {
+    background-color: rgb(236, 236, 236);
+}
+
 header {
+
+    .sans-top-bar {
+        background-color: rgba($color: #fff, $alpha: 0.7);
+    }
+    .sans-top-brand {
+        background-color: rgba($color: #fff, $alpha: 0.3);
+        text-align: center;
+        .custom-logo {
+            max-height: 80px;
+        }
+    }
+    .sans-top-brand-home {
+        background-color: rgba($color: #fff, $alpha: 0.3);
+        text-align: center;
+        .custom-logo {
+            max-height: 250px;
+        }
+    }
+
     nav {
         ul {
             &.menu {
@@ -68,9 +108,13 @@ header {
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     section {
-        background-color: #f9fbef;
         padding: 20px;
     }
+}
+
+.sans-grd-ctr {
+    display: grid;
+    place-items: center;
 }
 
 .sans-flx {
@@ -78,8 +122,16 @@ header {
     justify-content: space-between;
 }
 
+.sans-alg-it-ctr {
+    align-items: center;
+}
+
 .sans-txt-rt {
     text-align: right;
+}
+
+.sans-txt-ctr {
+    text-align: center;
 }
 
 .sans-flx-col {
@@ -89,7 +141,7 @@ header {
 }
 
 footer {
-    background-color: #e6efea;
+    background-color: rgba($color: #fff, $alpha: 0.5);
     text-align: center;
     ul {
         list-style: none;
