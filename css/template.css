@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  color: #262b2b;
 }
 
 .sans-pg-fold-r3 {
@@ -30,29 +31,24 @@ h2 {
 }
 
 .sans-row-bg-1 {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .sans-row-bg-2 {
-  background-color: #ececec;
+  background-color: #e8e8e8;
 }
 
 header .sans-top-bar {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-header .sans-top-brand {
+header .sans-top-brand, header .sans-top-brand-home {
   background-color: rgba(255, 255, 255, 0.3);
   text-align: center;
 }
 
 header .sans-top-brand .custom-logo {
   max-height: 80px;
-}
-
-header .sans-top-brand-home {
-  background-color: rgba(255, 255, 255, 0.3);
-  text-align: center;
 }
 
 header .sans-top-brand-home .custom-logo {
