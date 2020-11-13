@@ -1,8 +1,17 @@
-$color-0: #262b2b !default;
-$color-5: #c4c4c4 !default;
-$color-6: rgba($color: #fff, $alpha: 0.3) !default;
-$color-7: rgba($color: #fff, $alpha: 0.5) !default;
-$color-8: rgba($color: #fff, $alpha: 0.7) !default;
-$color-9: #e8e8e8 !default;
-$color-10: #ffffff !default;
+
+$primary: #ce5320 !default;
+$accent: #555556 !default;
+$neutral: #c4c4c4 !default;
+$black: #000000 !default;
+$white: #ffffff !default;
+
+$primary-lightest: lighten($primary, 52%);
+$primary-lighter: lighten($primary, 50%);
+$primary-darker: darken($primary, 12%);
+$primary-darkest: darken($primary, 25%);
+
+$accent-lightest: lighten($accent, 60%);
+$accent-lighter: lighten($accent, 40%);
+$accent-darker: darken($accent, 7%);
+$accent-darkest: darken($accent, 15%);
 

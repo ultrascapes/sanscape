@@ -2,11 +2,11 @@
 
 body {
     font-family: sans-serif;
-    background: $color-5;
+    background: $neutral;
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    color: $color-0;
+    color: $black;
 }
 
 .sans-pg-fold-r3 {
@@ -24,9 +24,12 @@ body {
 
 h2 {
     font-weight: 300;
+    color: $primary-darker;
 }
 
-
+a {
+    color: $primary-darkest;
+}
 
 #primary {
     
@@ -35,19 +38,19 @@ h2 {
 }
 
 .sans-row-bg-1 {
-    background-color: $color-10;
+    background-color: $primary-lightest;
 }
 .sans-row-bg-2 {
-    background-color: $color-9;
+    background-color: $accent-lightest;
 }
 
 header {
 
     .sans-top-bar {
-        background-color: $color-8;
+        background-color: $accent-lightest;
     }
     .sans-top-brand, .sans-top-brand-home {
-        background-color: $color-6;
+        background-color: $white;
         text-align: center;
     }
     .sans-top-brand {
@@ -72,7 +75,7 @@ header {
             list-style: none;
             padding: 0;
             a {
-                color: $color-0;
+                color: $primary-darkest;
                 text-decoration: none;
             }
             li {
@@ -144,7 +147,7 @@ header {
 }
 
 footer {
-    background-color: $color-7;
+    background-color: rgba($color: $white, $alpha: 0.5);
     text-align: center;
     ul {
         list-style: none;

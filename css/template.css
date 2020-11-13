@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  color: #262b2b;
+  color: #000000;
 }
 
 .sans-pg-fold-r3 {
@@ -23,6 +23,11 @@ body {
 
 h2 {
   font-weight: 300;
+  color: #993e18;
+}
+
+a {
+  color: #60270f;
 }
 
 #primary {
@@ -31,19 +36,19 @@ h2 {
 }
 
 .sans-row-bg-1 {
-  background-color: #ffffff;
+  background-color: #fefbf9;
 }
 
 .sans-row-bg-2 {
-  background-color: #e8e8e8;
+  background-color: #eeeeef;
 }
 
 header .sans-top-bar {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: #eeeeef;
 }
 
 header .sans-top-brand, header .sans-top-brand-home {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #ffffff;
   text-align: center;
 }
 
@@ -81,7 +86,7 @@ header nav ul.menu {
 }
 
 header nav ul a {
-  color: #262b2b;
+  color: #60270f;
   text-decoration: none;
 }
 
