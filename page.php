@@ -1,8 +1,6 @@
 <?php get_header(); ?>
-    
-    <div class="sans-cont" id="primary">
-        <main id="main" role="main">
-            <h2>Template: page.php</h2>
+    <div class="sans-bkgd-pg" id="primary">
+        <main id="main" role="main" class="sans-cont">
             <?php if ( have_posts()  ) : while ( have_posts() ) : the_post(); ?>
 
                 <?php get_template_part( '/template-parts/content', 'page' ); ?>
@@ -14,10 +12,8 @@
             <?php endif; ?>
 
       
-        </main>    
+        </main>  
+        <h6>Template: page.php</h6>  
     </div>
     
-    <?php // get_sidebar(); ?>
-
-
 <?php get_footer(); ?>

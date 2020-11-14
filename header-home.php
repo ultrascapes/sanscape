@@ -6,7 +6,12 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <div class="sans-pg-fold-r3">
+
+    <div id="site-header" class="sans-pg-fold-r3"
+    <?php if ( get_header_image() ) : ?>
+        style="background-image: url('<?php header_image(); ?>');"
+    <?php endif; ?>
+    >
         <header id="masthead" role="banner">
             <?php get_template_part( '/template-parts/header', 'nav' ); ?>
             <div class="sans-top-brand-home">
@@ -18,17 +23,18 @@
                             }
                         ?>
                     </a>
+
                 </div>
             </div>
         </header>
-        <div class="sans-cont sans-txt-ctr sans-grd-ctr">
-            <div>
-                <h1><?php bloginfo( 'name' ); ?></h1>
-                <h2><?php bloginfo( 'description' ); ?></h2>
+        <div id="home-header-r2" class="sans-txt-ctr sans-grd-ctr">
+            <div id="home-site-intro" class="sans-cont">
+                <span class="site-name"><?php bloginfo( 'name' ); ?></span>
+                <span class="site-desc"><?php bloginfo( 'description' ); ?></span>
             </div>
         </div>
-        <div class="sans-cont sans-txt-ctr">
-            Learn More
+        <div id="home-header-r3" class="sans-txt-ctr">
+            <a id="learn-more" class="sans-cont" href="#home-main">Learn More</a>
         </div>
     </div>
 

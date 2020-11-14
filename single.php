@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     
-    <div id="primary">
-        <main id="main" role="main">
+    <div class="sans-bkgd-pg" id="primary">
+        <main id="main" role="main" class="sans-cont">
 
             <?php if ( have_posts()  ) : while ( have_posts() ) : the_post(); ?>
 
@@ -18,8 +18,5 @@
             <hr>        
         </main>    
     </div>
-    
-    <?php get_sidebar(); ?>
-
 
 <?php get_footer(); ?>

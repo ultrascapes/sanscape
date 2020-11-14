@@ -12,7 +12,7 @@ add_theme_support( 'post-thumbnails' );
 add_theme_support( 'html5' );
 add_theme_support( 'automatic-feed-links' );
 
-add_theme_support( 'custom-background' );
+//add_theme_support( 'custom-background' );
 $args = array(
   'default-color' => 'c4c4c4',
   'default-image' => get_template_directory_uri() . '/img/home.jpg',
@@ -21,7 +21,14 @@ $args = array(
 add_theme_support( 'custom-background', $args );
 
 
-add_theme_support( 'custom-header' );
+
+  add_theme_support( 'custom-header');
+
+
+
+
+//add_theme_support( 'custom-header' );
+
 add_theme_support( 'custom-logo' );
 
 
@@ -62,7 +69,17 @@ function sanscape_widgets_init() {
       'name'          => esc_html__( 'Home One', 'Sanscape' ),
       'id'            => 'home-one',
       'description'   => esc_html__( 'Add widgets for home page position one', 'Sanscape' ),
-      'before_widget' => '<section>',
+      'before_widget' => '<section class="home-one-sidebar">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h2>',
+      'after_title'   => '</h2>',
+    ]);  
+
+    register_sidebar([
+      'name'          => esc_html__( 'Footer Top', 'Sanscape' ),
+      'id'            => 'footer-top',
+      'description'   => esc_html__( 'Add widgets for home page position two', 'Sanscape' ),
+      'before_widget' => '<section class="home-two-sidebar">',
       'after_widget'  => '</section>',
       'before_title'  => '<h2>',
       'after_title'   => '</h2>',
@@ -78,41 +95,14 @@ function sanscape_widgets_init() {
       'after_title'   => '</h2>',
     ]);  
     register_sidebar([
-        'name'          => esc_html__( 'Footer One', 'Sanscape' ),
-        'id'            => 'footer-one',
+        'name'          => esc_html__( 'Footer Main', 'Sanscape' ),
+        'id'            => 'footer-main',
         'description'   => esc_html__( 'Add widgets for Footer position one', 'Sanscape' ),
         'before_widget' => '<section>',
         'after_widget'  => '</section>',
         'before_title'  => '<h2>',
         'after_title'   => '</h2>',
       ]);  
-      register_sidebar([
-        'name'          => esc_html__( 'Footer Two', 'Sanscape' ),
-        'id'            => 'footer-two',
-        'description'   => esc_html__( 'Add widgets for Footer position two', 'Sanscape' ),
-        'before_widget' => '<section>',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2>',
-        'after_title'   => '</h2>',
-      ]);  
-      register_sidebar([
-        'name'          => esc_html__( 'Footer Three', 'Sanscape' ),
-        'id'            => 'footer-three',
-        'description'   => esc_html__( 'Add widgets for Footer position three', 'Sanscape' ),
-        'before_widget' => '<section>',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2>',
-        'after_title'   => '</h2>',
-      ]);  
-      register_sidebar([
-        'name'          => esc_html__( 'Footer Four', 'Sanscape' ),
-        'id'            => 'footer-four',
-        'description'   => esc_html__( 'Add widgets for Footer position four', 'Sanscape' ),
-        'before_widget' => '<section>',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2>',
-        'after_title'   => '</h2>',
-      ]);
   }
   add_action( 'widgets_init', 'sanscape_widgets_init' );
 

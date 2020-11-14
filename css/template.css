@@ -1,10 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: sans-serif;
-  background: #c4c4c4;
+  background: #ececec;
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: #000000;
+}
+
+#site-header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
 }
 
 .sans-pg-fold-r3 {
@@ -15,10 +26,22 @@ body {
       grid-template-rows: auto 1fr auto;
 }
 
+.sans-pg-fold-r2 {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+}
+
 .sans-pg-fold-r1 {
   height: 100vh;
   display: -ms-grid;
   display: grid;
+}
+
+.home-one-sidebar, .home-two-sidebar {
+  text-align: center;
 }
 
 h2 {
@@ -30,16 +53,15 @@ a {
   color: #60270f;
 }
 
-#primary {
-  margin-top: 20px;
-  margin-bottom: 20px;
+a:hover {
+  text-decoration: none;
 }
 
 .sans-row-bg-1 {
   background-color: #fefbf9;
 }
 
-.sans-row-bg-2 {
+.sans-bkgd-pg {
   background-color: #eeeeef;
 }
 
@@ -54,10 +76,12 @@ header .sans-top-brand, header .sans-top-brand-home {
 
 header .sans-top-brand .custom-logo {
   max-height: 80px;
+  width: auto;
 }
 
 header .sans-top-brand-home .custom-logo {
   max-height: 250px;
+  width: auto;
 }
 
 header nav ul {
@@ -88,6 +112,12 @@ header nav ul.menu {
 header nav ul a {
   color: #60270f;
   text-decoration: none;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+
+header nav ul a:hover {
+  color: #993e18;
 }
 
 header nav ul li {
@@ -104,11 +134,57 @@ header nav ul li:last-child {
   margin: 0 0 0 10px;
 }
 
+#home-header-r2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.7)));
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.7));
+  padding: 10px;
+}
+
+#home-header-r3 {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+}
+
+#home-header-r3 #learn-more {
+  text-decoration: none;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+
+#home-header-r3 #learn-more::after {
+  display: block;
+  content: '\25BC';
+}
+
+#home-header-r3 #learn-more:hover {
+  color: #993e18;
+}
+
+#home-site-intro {
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+  font-size: 2em;
+}
+
+#home-site-intro .site-name, #home-site-intro .site-desc {
+  margin: 20px 0;
+  display: block;
+}
+
+#home-site-intro .site-name {
+  font-weight: 500;
+  color: #434344;
+}
+
+#home-site-intro .site-desc {
+  font-weight: 300;
+  color: #60270f;
+}
+
 .sans-cont {
   margin: 0 auto;
   padding: 10px 0;
   width: 94%;
-  max-width: 1200px;
+  max-width: 980px;
 }
 
 .sans-grd-cont {
@@ -166,7 +242,6 @@ header nav ul li:last-child {
 }
 
 footer {
-  background-color: rgba(255, 255, 255, 0.5);
   text-align: center;
 }
 
@@ -175,7 +250,71 @@ footer ul {
   padding: 0;
 }
 
+footer ul.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+}
+
+footer ul.menu li {
+  padding: 5px 0;
+  margin: 0 10px;
+}
+
 footer ul.children {
   font-size: 0.5em;
+}
+
+footer .custom-logo {
+  max-height: 80px;
+  width: auto;
+}
+
+footer .footer-middle {
+  background-color: white;
+}
+
+footer .footer-bottom {
+  padding: 10px;
+  background-color: #eeeeef;
+  color: #434344;
+  font-size: 0.8em;
+}
+
+.button-primary {
+  margin: 20px;
+  padding: 20px;
+  background-color: #ce5320;
+  border: #a24119 solid 1px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #60270f;
+  -webkit-box-shadow: 1px 1px 2px rgba(96, 39, 15, 0.5);
+          box-shadow: 1px 1px 2px rgba(96, 39, 15, 0.5);
+  border-radius: 2px;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+
+.button-primary:hover {
+  background-color: #993e18;
+}
+
+#primary {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+#primary h1 {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 300;
+  color: #2f2f30;
 }
 /*# sourceMappingURL=template.css.map */
