@@ -57,6 +57,11 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+}
+
 .sans-row-bg-1 {
   background-color: #fefbf9;
 }
@@ -74,38 +79,12 @@ header .sans-top-brand, header .sans-top-brand-home {
   text-align: center;
 }
 
-header .sans-top-brand .custom-logo {
-  max-height: 80px;
-  width: auto;
-}
-
-header .sans-top-brand-home .custom-logo {
-  max-height: 250px;
-  width: auto;
-}
-
 header nav ul {
   list-style: none;
   padding: 0;
-  /*
-            li.menu-item-has-children::before {
-                content: "\25bc";
-                float: right;
-                opacity: 0.5;
-                color: white;
-            }
-            */
 }
 
 header nav ul.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   margin: 0;
 }
 
@@ -121,17 +100,33 @@ header nav ul a:hover {
 }
 
 header nav ul li {
-  /*border-top: rgba($color: #262b2b, $alpha: 0.5) solid 1px;*/
   padding: 5px 0;
   margin: 0 10px;
-  /*ul {
-                    max-height: 0;
-                    overflow: hidden;
-                }*/
 }
 
 header nav ul li:last-child {
   margin: 0 0 0 10px;
+}
+
+@media (min-width: 768px) {
+  header .sans-top-brand .custom-logo {
+    max-height: 80px;
+    width: auto;
+  }
+  header .sans-top-brand-home .custom-logo {
+    max-height: 250px;
+    width: auto;
+  }
+  header nav ul.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 #home-header-r2 {
@@ -184,19 +179,31 @@ header nav ul li:last-child {
   margin: 0 auto;
   padding: 10px 0;
   width: 94%;
-  max-width: 980px;
+}
+
+@media (min-width: 980px) {
+  .sans-cont {
+    max-width: 980px;
+  }
 }
 
 .sans-grd-cont {
   display: -ms-grid;
   display: grid;
-  gap: 10px;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(600px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 }
 
 .sans-grd-cont section {
   padding: 20px;
+}
+
+@media (min-width: 980px) {
+  .sans-grd-cont {
+    gap: 10px;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 
 .sans-grd-ctr {
@@ -285,25 +292,46 @@ footer .footer-bottom {
   font-size: 0.8em;
 }
 
-.button-primary {
+.button-primary, .button-accent {
   margin: 20px;
   padding: 20px;
-  background-color: #ce5320;
-  border: #a24119 solid 1px;
-  color: #ffffff;
+  font-weight: 400;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 2px #60270f;
-  -webkit-box-shadow: 1px 1px 2px rgba(96, 39, 15, 0.5);
-          box-shadow: 1px 1px 2px rgba(96, 39, 15, 0.5);
   border-radius: 2px;
   display: inline-block;
   text-decoration: none;
-  -webkit-transition: background-color 500ms;
-  transition: background-color 500ms;
+}
+
+.button-primary {
+  background-color: #ce5320;
+  border: #a24119 solid 1px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #4a1e0b;
+  -webkit-box-shadow: 1px 1px 2px rgba(96, 39, 15, 0.5);
+          box-shadow: 1px 1px 2px rgba(96, 39, 15, 0.5);
+  -webkit-transition: background-color 500ms, border 500ms;
+  transition: background-color 500ms, border 500ms;
 }
 
 .button-primary:hover {
-  background-color: #993e18;
+  background-color: #b84a1d;
+  border: #8c3816 solid 1px;
+}
+
+.button-accent {
+  background-color: #555556;
+  border: #3c3c3c solid 1px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #090909;
+  -webkit-box-shadow: 1px 1px 2px rgba(47, 47, 48, 0.5);
+          box-shadow: 1px 1px 2px rgba(47, 47, 48, 0.5);
+  -webkit-transition: background-color 500ms, border 500ms;
+  transition: background-color 500ms, border 500ms;
+}
+
+.button-accent:hover {
+  background-color: #484849;
+  border: #2f2f30 solid 1px;
 }
 
 #primary {

@@ -55,7 +55,10 @@ a {
     }
 }
 
-
+img {
+    height: auto;
+    max-width: 100%;
+}
 
 .sans-row-bg-1 {
     background-color:  $primary-lightest;
@@ -64,8 +67,8 @@ a {
     background-color: $accent-lightest;
 }
 
-header {
 
+header {
     .sans-top-bar {
         background-color: $accent-lightest;
     }
@@ -73,23 +76,10 @@ header {
         background-color: $white;
         text-align: center;
     }
-    .sans-top-brand {
-        .custom-logo {
-            @include header-logo-size(80px);
-        }
-    }
-    .sans-top-brand-home {
-        .custom-logo {
-            @include header-logo-size(250px);
-        }
-    }
 
     nav {
         ul {
             &.menu {
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: flex-end;
                 margin: 0;
             }
             list-style: none;
@@ -103,28 +93,42 @@ header {
                 }
             }
             li {
-                /*border-top: rgba($color: #262b2b, $alpha: 0.5) solid 1px;*/
                 padding: 5px 0;
                 margin: 0 10px;
-                /*ul {
-                    max-height: 0;
-                    overflow: hidden;
-                }*/
                 &:last-child {
                     margin: 0 0 0 10px;
                 }
             }
-            /*
-            li.menu-item-has-children::before {
-                content: "\25bc";
-                float: right;
-                opacity: 0.5;
-                color: white;
-            }
-            */
         }
     }
 }
+
+@media (min-width: $breakpoint-tablet) {
+    header {
+        .sans-top-brand {
+            .custom-logo {
+                @include header-logo-size(80px);
+            }
+        }
+        .sans-top-brand-home {
+            .custom-logo {
+                @include header-logo-size(250px);
+            }
+        }
+    
+        nav {
+            ul {
+                &.menu {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}
+
+
 
 #home-header-r2 {
     background: linear-gradient(rgba($color: $white, $alpha: 0.1), rgba($color: $white, $alpha: 0.7));
@@ -168,15 +172,27 @@ header {
     margin: 0 auto;
     padding: 10px 0;
     width: 94%;
-    max-width: 980px;
 }
+
+@media (min-width: 980px) {
+    .sans-cont {
+        max-width: 980px;
+    }
+}
+
 
 .sans-grd-cont {
     display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     section {
         padding: 20px;
+    }
+}
+
+@media (min-width: 980px) {
+    .sans-grd-cont {
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
@@ -242,25 +258,53 @@ footer {
     }
 }
 
-
-.button-primary {
+%button {
     margin: 20px;
     padding: 20px;
-    background-color: $primary;
-    border: darken($primary, 10%) solid 1px;
-    color: $white;
+    font-weight: 400;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgba($color: $primary-darkest, $alpha: 1);
-    box-shadow: 1px 1px 2px rgba($color: $primary-darkest, $alpha: 0.5);
     border-radius: 2px;
     display: inline-block;
     text-decoration: none;
-    transition: background-color 500ms;
+}
+
+.button-primary {
+    @extend %button;
+    background-color: $primary;
+    border: darken($primary, 10%) solid 1px;
+    @if(lightness($primary) < 70%) {
+        color: $white;
+        text-shadow: 1px 1px 2px rgba($color: darken($primary, 30%), $alpha: 1);
+    } @else {
+        color: $black;
+        text-shadow: 1px 1px 2px rgba($color: lighten($primary, 50%), $alpha: 1);
+    }
+    box-shadow: 1px 1px 2px rgba($color: $primary-darkest, $alpha: 0.5);
+    transition: background-color 500ms, border 500ms;
     &:hover {
-        background-color: $primary-darker;
+        background-color: darken($primary, 5%);
+        border: darken($primary, 15%) solid 1px;
     }
 }
 
+.button-accent {
+    @extend %button;
+    background-color: $accent;
+    border: darken($accent, 10%) solid 1px;
+    @if(lightness($accent) < 70%) {
+        color: $white;
+        text-shadow: 1px 1px 2px rgba($color: darken($accent, 30%), $alpha: 1);
+    } @else {
+        color: $black;
+        text-shadow: 1px 1px 2px rgba($color: lighten($accent, 50%), $alpha: 1);
+    }
+    box-shadow: 1px 1px 2px rgba($color: $accent-darkest, $alpha: 0.5);
+    transition: background-color 500ms, border 500ms;
+    &:hover {
+        background-color: darken($accent, 5%);
+        border: darken($accent, 15%) solid 1px;
+    }
+}
 
 #primary {   
     padding-top: 20px;

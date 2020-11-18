@@ -10,6 +10,7 @@
             </div>
             <div class="sans-cont sans-txt-ctr">
                 <a href="<?php echo esc_url( home_url( '/contact/') ) ;?>" class="button-primary">Final Call To Action</a>
+                <a href="<?php echo esc_url( home_url( '/contact/') ) ;?>" class="button-accent">Final Call To Action</a>
             </div>
             
                 <div class="footer-middle">
