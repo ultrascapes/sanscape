@@ -27,7 +27,6 @@ body {
 }
 
 .sans-pg-fold-r2 {
-    min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr;
 }
@@ -77,7 +76,19 @@ header {
         text-align: center;
     }
 
-    nav {
+    .sans-main-menu {
+        text-align: right;
+        .main-menu {
+            fill: $primary-darkest;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+    }
+
+    nav.main-navigation {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 200ms;
         ul {
             &.menu {
                 margin: 0;
@@ -95,9 +106,6 @@ header {
             li {
                 padding: 5px 0;
                 margin: 0 10px;
-                &:last-child {
-                    margin: 0 0 0 10px;
-                }
             }
         }
     }
@@ -105,6 +113,12 @@ header {
 
 @media (min-width: $breakpoint-tablet) {
     header {
+        .sans-main-menu {
+            .main-menu {
+                display: none;
+            }
+        }
+
         .sans-top-brand {
             .custom-logo {
                 @include header-logo-size(80px);
@@ -116,12 +130,19 @@ header {
             }
         }
     
-        nav {
+        nav.main-navigation {
+            max-height: unset;
+            overflow: visible;
             ul {
                 &.menu {
                     display: flex;
                     flex-wrap: nowrap;
                     justify-content: flex-end;
+                }
+            }
+            li {
+                &:last-child {
+                    margin: 0 0 0 10px;
                 }
             }
         }
@@ -182,8 +203,6 @@ header {
 
 
 .sans-grd-cont {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     section {
         padding: 20px;
     }
@@ -191,6 +210,8 @@ header {
 
 @media (min-width: 980px) {
     .sans-grd-cont {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
         gap: 10px;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }

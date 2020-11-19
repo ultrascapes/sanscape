@@ -27,7 +27,6 @@ body {
 }
 
 .sans-pg-fold-r2 {
-  min-height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto 1fr;
@@ -79,36 +78,52 @@ header .sans-top-brand, header .sans-top-brand-home {
   text-align: center;
 }
 
-header nav ul {
+header .sans-main-menu {
+  text-align: right;
+}
+
+header .sans-main-menu .main-menu {
+  fill: #60270f;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+header nav.main-navigation {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 200ms;
+  transition: max-height 200ms;
+}
+
+header nav.main-navigation ul {
   list-style: none;
   padding: 0;
 }
 
-header nav ul.menu {
+header nav.main-navigation ul.menu {
   margin: 0;
 }
 
-header nav ul a {
+header nav.main-navigation ul a {
   color: #60270f;
   text-decoration: none;
   -webkit-transition: color 200ms;
   transition: color 200ms;
 }
 
-header nav ul a:hover {
+header nav.main-navigation ul a:hover {
   color: #993e18;
 }
 
-header nav ul li {
+header nav.main-navigation ul li {
   padding: 5px 0;
   margin: 0 10px;
 }
 
-header nav ul li:last-child {
-  margin: 0 0 0 10px;
-}
-
 @media (min-width: 768px) {
+  header .sans-main-menu .main-menu {
+    display: none;
+  }
   header .sans-top-brand .custom-logo {
     max-height: 80px;
     width: auto;
@@ -117,7 +132,11 @@ header nav ul li:last-child {
     max-height: 250px;
     width: auto;
   }
-  header nav ul.menu {
+  header nav.main-navigation {
+    max-height: unset;
+    overflow: visible;
+  }
+  header nav.main-navigation ul.menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -126,6 +145,9 @@ header nav ul li:last-child {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+  header nav.main-navigation li:last-child {
+    margin: 0 0 0 10px;
   }
 }
 
@@ -187,19 +209,16 @@ header nav ul li:last-child {
   }
 }
 
-.sans-grd-cont {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(600px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-}
-
 .sans-grd-cont section {
   padding: 20px;
 }
 
 @media (min-width: 980px) {
   .sans-grd-cont {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(600px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     gap: 10px;
     -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

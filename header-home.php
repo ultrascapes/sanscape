@@ -6,7 +6,6 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-
     <div id="site-header" class="sans-pg-fold-r3"
     <?php if ( get_header_image() ) : ?>
         style="background-image: url('<?php header_image(); ?>');"
