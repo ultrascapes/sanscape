@@ -1,0 +1,29 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    background: $neutral;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: $black;
+}
+
+h2 {
+    font-weight: 300;
+    color: $primary-darker;
+}
+
+a {
+    color: $primary-darkest;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}

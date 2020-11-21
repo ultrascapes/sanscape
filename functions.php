@@ -5,9 +5,6 @@
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
 
-//This is not working
-//add_theme_support( 'post_formats', ['aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'] );
-//
 
 add_theme_support( 'html5' );
 add_theme_support( 'automatic-feed-links' );
@@ -21,13 +18,8 @@ $args = array(
 add_theme_support( 'custom-background', $args );
 
 
+add_theme_support( 'custom-header');
 
-  add_theme_support( 'custom-header');
-
-
-
-
-//add_theme_support( 'custom-header' );
 
 add_theme_support( 'custom-logo' );
 
@@ -45,22 +37,25 @@ add_theme_support( 'starter-content' );
 function sanscape_enqueue_styles() {
     //Change time() to version number when in production
     wp_enqueue_style( 'google-font-css', "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap", [], '', 'all' );
-    wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', [], time(), 'all' ); 
-    wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/css/template.css', ['google-font-css'], time(), 'all' ); 
+    wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', [], '0.1', 'all' ); 
+    wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/css/template.css', ['google-font-css'], '0.1', 'all' ); 
 }
 add_action( 'wp_enqueue_scripts', 'sanscape_enqueue_styles' );
 
 // Load in JS
 function sanscape_enqueue_scripts() {
-    wp_enqueue_script( 'theme-js', get_stylesheet_directory_uri() . '/js/template.js', [], time(), true );
+  //Change time() to version number when in production
+    wp_enqueue_script( 'theme-js', get_stylesheet_directory_uri() . '/js/template.js', [], '0.1', true );
 }
 add_action( 'wp_enqueue_scripts', 'sanscape_enqueue_scripts');
 
 
 // Register Menu Locations
 register_nav_menus( [
+    'top-menu' => esc_html__( 'Top Menu', 'sanscape' ),
     'main-menu' => esc_html__( 'Main Menu', 'sanscape' ),
-    'footer-menu' => esc_html__( 'Footer Menu', 'sanscape' )
+    'footer-top-menu' => esc_html__( 'Footer Top Menu', 'sanscape' ),
+    'footer-main-menu' => esc_html__( 'Footer Main Menu', 'sanscape' )
 ]);
 
 // Setup Widget Areas

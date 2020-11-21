@@ -2,7 +2,6 @@
     
     <div id="primary">
         <main id="main" role="main">
-            <h2>index.php</h2>
             <?php if ( have_posts()  ) : while ( have_posts() ) : the_post(); ?>
 
                 <?php get_template_part( '/template-parts/content' ); ?>
@@ -21,5 +20,5 @@
     
     <?php get_sidebar(); ?>
 
-
+    <small>index.php</small>
 <?php get_footer(); ?>

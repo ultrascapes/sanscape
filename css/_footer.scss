@@ -1,0 +1,35 @@
+footer {
+    text-align: center;
+    ul {
+        &.menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            li {
+                padding: 5px 0;
+                margin: 5px 10px;
+            }           
+        }
+        list-style: none;
+        padding: 0;
+        &.children {
+            font-size: 0.5em;
+        }
+    }
+    .custom-logo {
+        @include header-logo-size(80px);
+    }
+
+    .footer-middle {
+        background-color: white;
+        padding: 20px 0;
+    }
+
+    .footer-bottom{
+        padding: 10px;
+        background-color: $accent-lightest;
+        color: $accent-darker;
+        font-size: 0.8em;
+    }
+}

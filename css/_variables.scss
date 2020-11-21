@@ -1,6 +1,5 @@
 
 $primary: #ce5320 !default;
-//$primary: #e9d6cd !default;
 $accent: #555556 !default;
 $neutral: #ececec !default;
 $black: #000000 !default;
@@ -17,4 +16,6 @@ $accent-darker: darken($accent, 7%);
 $accent-darkest: darken($accent, 15%);
 
 
-$breakpoint-tablet: 768px;
+
+$tablet-max: 767px;
+$tablet-min: 768px;

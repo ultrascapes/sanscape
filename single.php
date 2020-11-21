@@ -2,7 +2,6 @@
     
     <div class="sans-bkgd-pg" id="primary">
         <main id="main" role="main" class="sans-cont">
-
             <?php if ( have_posts()  ) : while ( have_posts() ) : the_post(); ?>
 
                 <?php get_template_part( '/template-parts/content' ); ?>
@@ -11,12 +10,8 @@
 
                 <?php get_template_part( '/template-parts/content', 'none' ); ?>
 
-            <?php endif; ?>
-
-            <hr>
-            <p><strong>Template: single.php</strong></p>
-            <hr>        
+            <?php endif; ?>      
         </main>    
     </div>
-
+<small>single.php</small>
 <?php get_footer(); ?>

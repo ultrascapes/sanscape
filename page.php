@@ -13,7 +13,6 @@
 
       
         </main>  
-        <h6>Template: page.php</h6>  
     </div>
-    
+    <small>page.php</small>
 <?php get_footer(); ?>

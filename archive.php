@@ -2,7 +2,6 @@
     
     <div id="primary">
         <main id="main" role="main">
-            <h2>Archive.php</h2>
             <h1><?php the_archive_title(); ?></h1>
 
             <?php if ( have_posts()  ) : while ( have_posts() ) : the_post(); ?>
@@ -16,14 +15,11 @@
             <?php endif; ?>
 
             <?php echo paginate_links(); ?>
-
-            <hr>
-            <p><strong>Template: archive.php</strong></p>
-            <hr>        
+    
         </main>    
     </div>
     
     <?php get_sidebar(); ?>
 
-
+<small>archive.php</small>
 <?php get_footer(); ?>

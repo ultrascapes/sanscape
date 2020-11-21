@@ -2,7 +2,6 @@
     
     <div id="primary">
         <main id="main" role="main">
-            <h2>attachment.php</h2>
             <?php if ( have_posts()  ) : while ( have_posts() ) : the_post(); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -23,15 +22,11 @@
 
                 <?php get_template_part( '/template-parts/content', 'none' ); ?>
 
-            <?php endif; ?>
-
-            <hr>
-            <p><strong>Template: attachment.php</strong></p>
-            <hr>        
+            <?php endif; ?>       
         </main>    
     </div>
     
     <?php get_sidebar(); ?>
 
-
+<small>attachment.php</small>
 <?php get_footer(); ?>

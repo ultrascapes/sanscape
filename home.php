@@ -2,7 +2,7 @@
     
     <div class="sans-bkgd-pg" id="primary">
         <main class="sans-cont" id="main" role="main">
-        <h2>home.php</h2>
+        
             <h1><?php wp_title(''); ?></h1>
 
             <?php if ( have_posts()  ) : while ( have_posts() ) : the_post(); ?>
@@ -18,5 +18,5 @@
             <?php echo paginate_links(); ?>     
         </main>    
     </div>
-
+    <small>home.php</small>
 <?php get_footer(); ?>

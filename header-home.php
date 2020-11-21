@@ -6,6 +6,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+    <?php get_template_part( '/template-parts/content', 'icons' ); ?>
     <div id="site-header" class="sans-pg-fold-r3"
     <?php if ( get_header_image() ) : ?>
         style="background-image: url('<?php header_image(); ?>');"
@@ -15,14 +16,11 @@
             <?php get_template_part( '/template-parts/header', 'nav' ); ?>
             <div class="sans-top-brand-home">
                 <div class="sans-cont">
-                    <a href="<?php echo esc_url( home_url( '/') ) ;?>" rel="home">
                         <?php
                             if ( function_exists( 'the_custom_logo' ) ) {
                                 the_custom_logo();
                             }
                         ?>
-                    </a>
-
                 </div>
             </div>
         </header>
@@ -33,7 +31,10 @@
             </div>
         </div>
         <div id="home-header-r3" class="sans-txt-ctr">
-            <a id="learn-more" class="sans-cont" href="#home-main">Learn More</a>
+            <a id="learn-more" class="sans-cont" href="#home-main">
+                Learn More<br>
+                <svg class="sans-tri-dwn"><use href="#sans-tri-down"></use></svg>
+            </a>
         </div>
     </div>
 

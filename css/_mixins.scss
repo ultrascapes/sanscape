@@ -1,4 +1,8 @@
-@mixin header-logo-size($height: 100%) {
-    max-height: $height;
-    width: auto;
+@mixin header-logo-size($height: 200px) {
+    height: $height + 10px;
+    .custom-logo {
+        margin: 5px 0;
+        height: $height;
+        width: auto;
+    }
 }

@@ -2,7 +2,6 @@
     
     <div id="primary">
         <main id="main" role="main">
-            <h2>Category.php</h2>
             <h1><?php the_archive_title(); ?></h1>
             <p><?php echo category_description(); ?></p>
             
@@ -26,5 +25,5 @@
     
     <?php get_sidebar(); ?>
 
-
+    <small>category.php</small>
 <?php get_footer(); ?>

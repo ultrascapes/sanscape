@@ -25,5 +25,5 @@
         </section>
 
     </main>
-    <hp>front-page.php</hp>
+    <small>front-page.php</small>
     <?php get_footer(); ?>

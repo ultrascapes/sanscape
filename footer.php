@@ -9,15 +9,21 @@
                 ?>
             </div>
             <div class="sans-cont sans-txt-ctr">
-                <a href="<?php echo esc_url( home_url( '/contact/') ) ;?>" class="button-primary">Final Call To Action</a>
-                <a href="<?php echo esc_url( home_url( '/contact/') ) ;?>" class="button-accent">Final Call To Action</a>
+                <nav class="sans-footer-top-menu" role="navigation">
+                            <?php 
+                                $args = [
+                                    'theme_location' => 'footer-top-menu'
+                                ];
+                            wp_nav_menu( $args ); 
+                            ?>
+                </nav>
             </div>
             
                 <div class="footer-middle">
-                    <nav id="site-navigation" class="sans-cont main-navigation" role="navigation">
+                    <nav class="sans-cont main-navigation" role="navigation">
                             <?php 
                                 $args = [
-                                    'theme_location' => 'footer-menu'
+                                    'theme_location' => 'footer-main-menu'
                                 ];
                             wp_nav_menu( $args ); 
                             ?>
