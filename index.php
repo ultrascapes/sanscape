@@ -20,5 +20,5 @@
     
     <?php get_sidebar(); ?>
 
-    <small>index.php</small>
+<small>index.php</small>
 <?php get_footer(); ?>

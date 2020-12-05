@@ -1,0 +1,15 @@
+.arch {
+    height: 300px;
+    width: 100%;
+    background-position-y: bottom;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: 1000px 300px;
+}
+
+
+@media (min-width: 980px) {
+    .arch {
+        background-size: 100% 300px;
+    }
+}

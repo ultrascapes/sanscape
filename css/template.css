@@ -4,7 +4,7 @@ html {
 
 body {
   font-family: sans-serif;
-  background: #ececec;
+  background-color: #ececec;
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -60,6 +60,10 @@ img {
 
 .sans-bkgd-pg {
   background-color: #eeeeef;
+}
+
+.sans-pad-10 {
+  padding: 10px;
 }
 
 .sans-cont {
@@ -272,15 +276,13 @@ header nav.sans-top-menu li:first-child {
   background-position: bottom;
 }
 
-#home-header-r2 {
+.translucent-faint-light {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.7)));
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.7));
-  padding: 10px;
 }
 
-#home-header-r3 {
+.translucent-light {
   background-color: rgba(255, 255, 255, 0.7);
-  padding: 10px;
 }
 
 #home-header-r3 #learn-more {
@@ -310,20 +312,21 @@ header nav.sans-top-menu li:first-child {
 
 #home-site-intro {
   text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
-  font-size: 2em;
 }
 
 #home-site-intro .site-name, #home-site-intro .site-desc {
-  margin: 20px 0;
+  padding: 20px 0;
   display: block;
 }
 
 #home-site-intro .site-name {
+  font-size: 2em;
   font-weight: 500;
   color: #434344;
 }
 
 #home-site-intro .site-desc {
+  font-size: 2em;
   font-weight: 300;
   color: #60270f;
 }
@@ -465,5 +468,20 @@ footer .footer-bottom {
   background-color: #eeeeef;
   color: #434344;
   font-size: 0.8em;
+}
+
+.arch {
+  height: 300px;
+  width: 100%;
+  background-position-y: bottom;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: 1000px 300px;
+}
+
+@media (min-width: 980px) {
+  .arch {
+    background-size: 100% 300px;
+  }
 }
 /*# sourceMappingURL=template.css.map */

@@ -123,14 +123,18 @@ header {
 }
 
 
-#home-header-r2 {
+
+.translucent-faint-light {
     background: linear-gradient(rgba($color: $white, $alpha: 0.1), rgba($color: $white, $alpha: 0.7));
-    padding: 10px;
 }
 
-#home-header-r3 {
+.translucent-light {
     background-color: rgba($color: $white, $alpha: 0.7);
-    padding: 10px;
+}
+
+
+
+#home-header-r3 {
     #learn-more {
         text-decoration: none;
         transition: color 100ms;
@@ -155,16 +159,18 @@ header {
 
 #home-site-intro {
     text-shadow: 1px 1px 3px rgba($color: $white, $alpha: 0.7);
-    font-size: 2em;
+    
     .site-name, .site-desc {
-        margin: 20px 0;
+        padding: 20px 0;
         display: block;
     }
     .site-name {
+        font-size: 2em;
         font-weight: 500;
         color: $accent-darker;
     }
     .site-desc {
+        font-size: 2em;
         font-weight: 300;
         color: $primary-darkest;
     }

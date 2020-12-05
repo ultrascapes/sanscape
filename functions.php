@@ -37,8 +37,8 @@ add_theme_support( 'starter-content' );
 function sanscape_enqueue_styles() {
     //Change time() to version number when in production
     wp_enqueue_style( 'google-font-css', "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap", [], '', 'all' );
-    wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', [], '0.1', 'all' ); 
-    wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/css/template.css', ['google-font-css'], '0.1', 'all' ); 
+    wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', [], time(), 'all' ); 
+    wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/css/template.css', ['google-font-css'], time(), 'all' ); 
 }
 add_action( 'wp_enqueue_scripts', 'sanscape_enqueue_styles' );
 
