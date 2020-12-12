@@ -30,7 +30,7 @@ img {
 }
 
 .sans-pg-fold-r3 {
-  height: 100vh;
+  min-height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto 1fr auto;
@@ -45,7 +45,7 @@ img {
 }
 
 .sans-pg-fold-r1 {
-  height: 100vh;
+  min-height: 100vh;
   display: -ms-grid;
   display: grid;
 }
@@ -55,11 +55,11 @@ img {
 }
 
 .sans-row-bg-1 {
-  background-color: #fefbf9;
+  background-color: #fdf4f0;
 }
 
 .sans-bkgd-pg {
-  background-color: #eeeeef;
+  background-color: #ffffff;
 }
 
 .sans-pad-10 {
@@ -141,7 +141,6 @@ img {
 }
 
 #primary h1 {
-  text-align: center;
   font-size: 3em;
   font-weight: 300;
   color: #2f2f30;
@@ -167,11 +166,11 @@ img {
 }
 
 header .sans-top-bar {
-  background-color: #eeeeef;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 header .sans-top-brand, header .sans-top-brand-home {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3);
   text-align: center;
 }
 
@@ -464,24 +463,54 @@ footer .footer-middle {
 }
 
 footer .footer-bottom {
-  padding: 10px;
-  background-color: #eeeeef;
+  background-color: white;
   color: #434344;
   font-size: 0.8em;
+}
+
+footer .footer-copyright {
+  padding: 20px;
 }
 
 .arch {
   height: 300px;
   width: 100%;
-  background-position-y: bottom;
   background-position-x: center;
-  background-repeat: no-repeat;
-  background-size: 1000px 300px;
+  background-size: cover;
 }
 
-@media (min-width: 980px) {
-  .arch {
-    background-size: 100% 300px;
-  }
+.arch-5 {
+  height: 400px;
+  width: 100%;
+  background-position-x: center;
+  background-size: cover;
+}
+
+#page-header {
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.arch-footer {
+  height: 150px;
+  background-color: white;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.arch-footer .footer-copyright {
+  color: white;
+  margin: auto auto 0 auto;
+}
+
+.arch-footer-content {
+  margin-top: -200px;
 }
 /*# sourceMappingURL=template.css.map */

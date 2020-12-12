@@ -11,7 +11,8 @@
                 <?php get_template_part( '/template-parts/content', 'none' ); ?>
 
             <?php endif; ?>      
-        </main>    
+        </main> 
+        <small>single.php</small>   
     </div>
-<small>single.php</small>
+
 <?php get_footer(); ?>

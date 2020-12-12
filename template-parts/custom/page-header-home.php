@@ -3,7 +3,7 @@
 <div id="home-header-r3" class="sans-txt-ctr">
     <div>
         <div class="arch"
-        style="background-image:url(<?php echo(get_stylesheet_directory_uri()); ?>/img/arch-1.png);"
+        style="background-image:url(<?php echo(get_stylesheet_directory_uri()); ?>/img/arch-1.svg);"
         ></div>
         <div id="home-site-intro" style="background: white; width: 100%;">
             <div class="sans-cont">

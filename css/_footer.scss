@@ -27,9 +27,11 @@ footer {
     }
 
     .footer-bottom{
-        padding: 10px;
-        background-color: $accent-lightest;
+        background-color: white;
         color: $accent-darker;
         font-size: 0.8em;
+    }
+    .footer-copyright {
+        padding: 20px;
     }
 }

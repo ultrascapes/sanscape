@@ -22,10 +22,10 @@
 
 header {
     .sans-top-bar {
-        background-color: $accent-lightest;
+        background-color: rgba($color: $white, $alpha: 0.7);
     }
     .sans-top-brand, .sans-top-brand-home {
-        background-color: $white;
+        background-color: rgba($color: $white, $alpha: 0.3);
         text-align: center;
     }
 

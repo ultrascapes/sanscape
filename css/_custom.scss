@@ -1,15 +1,40 @@
 .arch {
     height: 300px;
     width: 100%;
-    background-position-y: bottom;
     background-position-x: center;
-    background-repeat: no-repeat;
-    background-size: 1000px 300px;
+    background-size: cover;
+}
+
+.arch-5 {
+    height: 400px;
+    width: 100%;
+    background-position-x: center;
+    background-size: cover;
 }
 
 
-@media (min-width: 980px) {
-    .arch {
-        background-size: 100% 300px;
+
+#page-header {
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.arch-footer {
+    height: 150px;
+    background-color: white;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: cover;
+    display: flex;
+    .footer-copyright {
+        color: white;
+        margin: auto auto 0 auto;
     }
+}
+
+.arch-footer-content {
+    margin-top: -200px;
 }

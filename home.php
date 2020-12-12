@@ -16,7 +16,8 @@
             <?php endif; ?>
 
             <?php echo paginate_links(); ?>     
-        </main>    
+        </main>   
+        <small>home.php</small> 
     </div>
-    <small>home.php</small>
+    
 <?php get_footer(); ?>

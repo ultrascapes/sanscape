@@ -20,5 +20,6 @@
                 </div>
             </div>
         </header>
+        <div class="arch" style="background-image:url(<?php echo(get_stylesheet_directory_uri()); ?>/img/arch-4.svg);"></div>
         <div class="sans-pg-content">
 
