@@ -22,17 +22,22 @@
 
 header {
     .sans-top-bar {
-        background-color: rgba($color: $white, $alpha: 0.7);
+        background-color: $white;
     }
     .sans-top-brand, .sans-top-brand-home {
-        background-color: rgba($color: $white, $alpha: 0.3);
         text-align: center;
+        background-color: rgba($white, 0.9);
     }
 
     .sans-top-brand, .sans-top-brand-home {
         @include header-logo-size(80px);
     }
 
+    /*
+    .custom-logo {
+        background-color: rgba($white, 1);
+    }
+    */
     .sans-main-menu {
         text-align: right;
         #sans-menu-toggle {
@@ -50,11 +55,11 @@ header {
             padding: 0;
             margin: 7px 0;
             a {
-                color: $primary-darkest;
+                color: $primary-darker;
                 text-decoration: none;
                 transition: color 200ms;
                 &:hover {
-                    color: $primary-darker;
+                    color: $primary-darkest;
                 }
             }
             li {
@@ -134,8 +139,35 @@ header {
 
 
 
-#home-header-r3 {
+
+    
+
+
+#home-site-intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    background-color: $white;
+    
+    .site-name, .site-desc {
+        padding: 20px 0;
+        display: block;
+    }
+    .site-name {
+        font-size: 2em;
+        font-weight: 500;
+        color: $accent-darker;
+    }
+    .site-desc {
+        font-size: 2em;
+        font-weight: 300;
+        color: $primary-darkest;
+    }
+
     #learn-more {
+        display: inline-block;
+        margin: auto 0 20px 0;
         text-decoration: none;
         transition: color 100ms;
         text-transform: uppercase;
@@ -153,25 +185,5 @@ header {
                 margin: 15px 0 5px 0;
             }
         }
-
-    }
-}
-
-#home-site-intro {
-    text-shadow: 1px 1px 3px rgba($color: $white, $alpha: 0.7);
-    
-    .site-name, .site-desc {
-        padding: 20px 0;
-        display: block;
-    }
-    .site-name {
-        font-size: 2em;
-        font-weight: 500;
-        color: $accent-darker;
-    }
-    .site-desc {
-        font-size: 2em;
-        font-weight: 300;
-        color: $primary-darkest;
     }
 }

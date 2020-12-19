@@ -1,7 +1,10 @@
 .sans-pg-fold-r3 {
-    min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+}
+
+.sans-100vh {
+    min-height: 100vh;
 }
 
 .sans-pg-fold-r2 {
@@ -29,6 +32,7 @@
 .sans-pad-10 {
     padding: 10px;
 }
+
 
 
 .sans-cont {
@@ -89,12 +93,23 @@
     justify-content: space-between;
 }
 
+
+
 #primary {   
-    padding-top: 20px;
-    padding-bottom: 60px;
+    padding-top: 0;
+    padding-bottom: 0;
     h1 {
+        margin-top: -5px;
         font-size: 3em;
         font-weight: 300;
         color: $accent-darkest;
     }
+}
+
+#primary-home {
+    h1 {
+        font-size: 3em;
+        font-weight: 300;
+        color: $accent-darkest;
+    } 
 }

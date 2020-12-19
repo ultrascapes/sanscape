@@ -14,10 +14,10 @@
 
 
 
-#page-header {
-    background-position: top center;
+.page-header-home, .page-header-general {
+    background-position: bottom center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .arch-footer {
@@ -37,4 +37,8 @@
 
 .arch-footer-content {
     margin-top: -200px;
+}
+
+.home-header-image {
+    margin-top: 100px;
 }
