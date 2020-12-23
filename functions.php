@@ -64,39 +64,39 @@ function sanscape_widgets_init() {
       'name'          => esc_html__( 'Home One', 'Sanscape' ),
       'id'            => 'home-one',
       'description'   => esc_html__( 'Add widgets for home page position one', 'Sanscape' ),
-      'before_widget' => '<section class="home-one-sidebar">',
-      'after_widget'  => '</section>',
-      'before_title'  => '<h2>',
-      'after_title'   => '</h2>',
+      'before_widget' => '<div class="sans-widget sans-txt-ctr">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h3>',
+      'after_title'   => '</h3>',
     ]);  
 
     register_sidebar([
       'name'          => esc_html__( 'Footer Top', 'Sanscape' ),
       'id'            => 'footer-top',
-      'description'   => esc_html__( 'Add widgets for home page position two', 'Sanscape' ),
-      'before_widget' => '<section class="home-two-sidebar">',
-      'after_widget'  => '</section>',
-      'before_title'  => '<h2>',
-      'after_title'   => '</h2>',
+      'description'   => esc_html__( 'Add widgets for the top of the home page', 'Sanscape' ),
+      'before_widget' => '<div class="sans-txt-ctr">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h3>',
+      'after_title'   => '</h3>',
     ]);  
 
     register_sidebar([
-      'name'          => esc_html__( 'Main Sidebar', 'Sanscape' ),
-      'id'            => 'main-sidebar',
-      'description'   => esc_html__( 'Add widgets for main sidebar here', 'Sanscape' ),
-      'before_widget' => '<section>',
-      'after_widget'  => '</section>',
-      'before_title'  => '<h2>',
-      'after_title'   => '</h2>',
+      'name'          => esc_html__( 'Posts Sidebar', 'Sanscape' ),
+      'id'            => 'posts-sidebar',
+      'description'   => esc_html__( 'Add widgets for sidebar on post feed and pages', 'Sanscape' ),
+      'before_widget' => '<div class="sans-widget">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h3>',
+      'after_title'   => '</h3>',
     ]);  
     register_sidebar([
         'name'          => esc_html__( 'Footer Main', 'Sanscape' ),
         'id'            => 'footer-main',
         'description'   => esc_html__( 'Add widgets for Footer position one', 'Sanscape' ),
-        'before_widget' => '<section>',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2>',
-        'after_title'   => '</h2>',
+        'before_widget' => '<div class="sans-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
       ]);  
   }
   add_action( 'widgets_init', 'sanscape_widgets_init' );

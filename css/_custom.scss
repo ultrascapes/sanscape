@@ -1,23 +1,28 @@
+%arch {
+    width: 100%;
+    background-position-x: center;
+    background-size: cover;
+}
+
+.arch-small {
+    @extend %arch;
+    height: 200px;
+}
+
 .arch {
+    @extend %arch;
     height: 300px;
-    width: 100%;
-    background-position-x: center;
-    background-size: cover;
 }
 
-.arch-5 {
+.arch-tall {
+    @extend %arch;
     height: 400px;
-    width: 100%;
-    background-position-x: center;
-    background-size: cover;
 }
 
-
-
-.page-header-home, .page-header-general {
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.arch-header-home {
+    @extend %arch;
+    height: 300px;
+    margin-top: 100px;
 }
 
 .arch-footer {
@@ -39,6 +44,4 @@
     margin-top: -200px;
 }
 
-.home-header-image {
-    margin-top: 100px;
-}
+

@@ -21,12 +21,12 @@ footer {
         @include header-logo-size(80px);
     }
 
-    .footer-middle {
+    .sans-footer-middle {
         background-color: white;
         padding: 20px 0;
     }
 
-    .footer-bottom{
+    .sans-footer-bottom{
         background-color: white;
         color: $accent-darker;
         font-size: 0.8em;

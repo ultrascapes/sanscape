@@ -55,24 +55,26 @@
     @extend %button-accent;
 }
 
-nav.sans-footer-top-menu {
-    margin-bottom: 40px;
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        li {
-            a {
-                @extend %button-accent;
-            }
-            &:first-of-type {
+nav {
+    &.sans-footer-top-menu {
+        margin-bottom: 40px;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
                 a {
-                    @extend %button-primary;
+                    @extend %button-accent;
+                }
+                &:first-of-type {
+                    a {
+                        @extend %button-primary;
+                    }
                 }
             }
         }
     }
-
 }
+
 
 %fields {
     border-radius: 2px;

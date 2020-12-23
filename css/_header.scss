@@ -1,3 +1,13 @@
+.sans-header-image {
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sans-background-tint {
+    background: linear-gradient(rgba($color: $black, $alpha: 0.4),rgba($color: $black, $alpha: 0.1));
+}
+
 @media (max-width: $tablet-max) {
     header {
         nav.main-navigation {
@@ -22,22 +32,17 @@
 
 header {
     .sans-top-bar {
-        background-color: $white;
+        background-color: rgba($white, 0.9);
     }
     .sans-top-brand, .sans-top-brand-home {
         text-align: center;
-        background-color: rgba($white, 0.9);
+        background-color: rgba($white, 0.8);
     }
 
     .sans-top-brand, .sans-top-brand-home {
         @include header-logo-size(80px);
     }
 
-    /*
-    .custom-logo {
-        background-color: rgba($white, 1);
-    }
-    */
     .sans-main-menu {
         text-align: right;
         #sans-menu-toggle {
@@ -127,8 +132,6 @@ header {
     background-position: bottom;
 }
 
-
-
 .translucent-faint-light {
     background: linear-gradient(rgba($color: $white, $alpha: 0.1), rgba($color: $white, $alpha: 0.7));
 }
@@ -136,12 +139,6 @@ header {
 .translucent-light {
     background-color: rgba($color: $white, $alpha: 0.7);
 }
-
-
-
-
-    
-
 
 #home-site-intro {
     text-align: center;
